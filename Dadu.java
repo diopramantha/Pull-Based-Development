@@ -22,7 +22,11 @@ public final class Dadu {
     }
   }
   public int lempar(){
-    hasil = randGenerator.nextInt(jumSisi) + 1;
+    int tmp;
+    do{
+      tmp=randGenerator.nextInt(jumSisi) + 1;
+    }while(tmp==hasil);
+    hasil = tmp;
     return hasil;
   }
   public int getJumSisi(){
